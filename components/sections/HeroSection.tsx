@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { DeliveryNotification } from "@/components/DeliveryNotification";
 import {
     Zap,
     Shield,
@@ -174,129 +174,24 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
 
 function PhoneScreen1() {
     return (
-        <div className="w-full h-full p-4 pt-12 bg-gradient-to-b from-[#0f0f0f] to-[#080808]">
-            <div className="flex items-center justify-between mb-3">
-                <div>
-                    <p className="text-[8px] text-gray-600 uppercase tracking-widest">Ζωντανός Χάρτης</p>
-                    <p className="text-sm font-display font-bold text-white">Στόλος</p>
-                </div>
-                <div className="w-7 h-7 bg-accent rounded-lg flex items-center justify-center">
-                    <MapPin size={12} className="text-foreground" />
-                </div>
-            </div>
-            <div className="w-full aspect-[4/3] bg-[#111] rounded-xl border border-white/5 relative overflow-hidden mb-3">
-                <div className="absolute inset-0 opacity-15">
-                    {Array.from({ length: 8 }).map((_, i) => (<div key={`h${i}`} className="absolute w-full h-px bg-white/10" style={{ top: `${(i + 1) * 12}%` }} />))}
-                    {Array.from({ length: 8 }).map((_, i) => (<div key={`v${i}`} className="absolute h-full w-px bg-white/10" style={{ left: `${(i + 1) * 12}%` }} />))}
-                </div>
-                <div className="absolute top-[20%] left-[25%] w-3 h-3 bg-accent rounded-full shadow-[0_0_12px_rgba(212,255,0,0.6)] animate-pulse" />
-                <div className="absolute top-[45%] left-[55%] w-3 h-3 bg-accent rounded-full shadow-[0_0_12px_rgba(212,255,0,0.6)] animate-pulse" style={{ animationDelay: "1s" }} />
-                <div className="absolute top-[65%] left-[35%] w-3 h-3 bg-accent rounded-full shadow-[0_0_12px_rgba(212,255,0,0.6)] animate-pulse" style={{ animationDelay: "2s" }} />
-                <div className="absolute top-[30%] left-[70%] w-2 h-2 bg-white/30 rounded-full" />
-                <div className="absolute top-[75%] left-[15%] w-2 h-2 bg-white/30 rounded-full" />
-                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none">
-                    <path d="M 25 20 Q 40 35 55 45 T 75 30" stroke="rgba(212,255,0,0.3)" strokeWidth="0.8" strokeDasharray="3 2" />
-                </svg>
-            </div>
-            <div className="grid grid-cols-3 gap-1.5">
-                <div className="bg-accent/10 rounded-lg p-2 border border-accent/20 text-center"><p className="text-[7px] text-gray-500 uppercase">Ενεργοί</p><p className="text-base font-display font-bold text-accent">12</p></div>
-                <div className="bg-white/5 rounded-lg p-2 border border-white/5 text-center"><p className="text-[7px] text-gray-500 uppercase">Σε Διαδρομή</p><p className="text-base font-display font-bold text-white">8</p></div>
-                <div className="bg-white/5 rounded-lg p-2 border border-white/5 text-center"><p className="text-[7px] text-gray-500 uppercase">Μ.Ο. ETA</p><p className="text-base font-display font-bold text-white">18λ</p></div>
-            </div>
+        <div className="w-full h-full bg-black relative">
+            <Image src="/mockups/phone-1.jpg" alt="SpeedBoys Rider App Map" fill className="object-cover" priority />
         </div>
     );
 }
 
 function PhoneScreen2() {
     return (
-        <div className="w-full h-full p-4 pt-12 bg-gradient-to-b from-[#0f0f0f] to-[#080808] relative">
-            <DeliveryNotification />
-            <div className="flex items-center justify-between mb-3">
-                <div>
-                    <p className="text-[8px] text-gray-600 uppercase tracking-widest">SpeedBoys</p>
-                    <p className="text-sm font-display font-bold text-white">Πίνακας Ελέγχου</p>
-                </div>
-                <div className="w-7 h-7 bg-accent rounded-lg flex items-center justify-center">
-                    <Zap size={12} className="text-foreground" />
-                </div>
-            </div>
-            <div className="bg-accent/10 rounded-xl p-3 border border-accent/20 mb-3">
-                <p className="text-[7px] text-gray-500 uppercase mb-0.5">Ενεργός Στόλος</p>
-                <div className="flex items-end gap-1">
-                    <span className="text-2xl font-display font-black text-accent">28</span>
-                    <span className="text-[9px] text-gray-500 mb-0.5">riders</span>
-                </div>
-            </div>
-            <div className="space-y-1.5 mb-3">
-                {[
-                    { name: "Pizza Express", status: "Σε Παράδοση", time: "12 λεπ", active: true },
-                    { name: "Sushi Master", status: "Παραλήφθηκε", time: "8 λεπ", active: true },
-                    { name: "Burger Joint", status: "Ετοιμάζεται", time: "—", active: false },
-                    { name: "Café Central", status: "Ανατέθηκε", time: "3 λεπ", active: true },
-                ].map((order, i) => (
-                    <div key={i} className="bg-white/5 rounded-lg p-2.5 border border-white/5">
-                        <div className="flex items-center justify-between">
-                            <div><p className="text-[10px] font-semibold text-white">{order.name}</p><p className="text-[8px] text-gray-500">{order.status}</p></div>
-                            <span className={`text-[9px] font-mono ${order.active ? "text-accent" : "text-gray-500"}`}>{order.time}</span>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <div className="grid grid-cols-2 gap-1.5">
-                <div className="bg-white/5 rounded-lg p-2 border border-white/5"><p className="text-[7px] text-gray-600 uppercase">Ολοκληρώθηκαν</p><p className="text-base font-bold text-white">312</p></div>
-                <div className="bg-white/5 rounded-lg p-2 border border-white/5"><p className="text-[7px] text-gray-600 uppercase">Μ.Ο. Χρόνος</p><p className="text-base font-bold text-white">22λ</p></div>
-            </div>
+        <div className="w-full h-full bg-black relative">
+            <Image src="/mockups/phone-2.jpg" alt="SpeedBoys Delivery Request" fill className="object-cover" priority />
         </div>
     );
 }
 
 function PhoneScreen3() {
     return (
-        <div className="w-full h-full p-4 pt-12 bg-gradient-to-b from-[#0f0f0f] to-[#080808]">
-            <div className="flex items-center justify-between mb-3">
-                <div>
-                    <p className="text-[8px] text-gray-600 uppercase tracking-widest">Παραγγελία</p>
-                    <p className="text-sm font-display font-bold text-white">Λεπτομέρειες</p>
-                </div>
-                <div className="w-7 h-7 bg-green-500/20 rounded-lg flex items-center justify-center">
-                    <Package size={12} className="text-green-400" />
-                </div>
-            </div>
-            <div className="bg-white/5 rounded-xl p-3 border border-white/5 mb-3">
-                <div className="flex items-center justify-between mb-2">
-                    <p className="text-[10px] font-semibold text-white">Pizza Express</p>
-                    <span className="text-[8px] px-2 py-0.5 bg-accent/10 text-accent rounded-full font-semibold">Σε Μεταφορά</span>
-                </div>
-                <div className="text-[8px] text-gray-500 space-y-1">
-                    <div className="flex justify-between"><span>Κωδικός</span><span className="text-white/60">#SP-2847</span></div>
-                    <div className="flex justify-between"><span>Προϊόντα</span><span className="text-white/60">3 τεμάχια</span></div>
-                    <div className="flex justify-between"><span>Πελάτης</span><span className="text-white/60">Γιάννης Π.</span></div>
-                </div>
-            </div>
-            <div className="space-y-0 mb-3">
-                {[
-                    { label: "Καταχωρήθηκε", time: "14:21", done: true },
-                    { label: "Ανατέθηκε σε Rider", time: "14:22", done: true },
-                    { label: "Παραλήφθηκε", time: "14:34", done: true },
-                    { label: "Σε Παράδοση", time: "14:38", done: false },
-                    { label: "Παραδόθηκε", time: "—", done: false },
-                ].map((step, i) => (
-                    <div key={i} className="flex items-start gap-2.5">
-                        <div className="flex flex-col items-center">
-                            <div className={`w-3 h-3 rounded-full border-2 flex-shrink-0 ${step.done ? "bg-accent border-accent" : "bg-transparent border-gray-600"}`} />
-                            {i < 4 && <div className={`w-px h-4 ${step.done ? "bg-accent/30" : "bg-gray-700"}`} />}
-                        </div>
-                        <div className="pb-1">
-                            <p className={`text-[9px] font-medium ${step.done ? "text-white" : "text-gray-500"}`}>{step.label}</p>
-                            <p className="text-[7px] text-gray-600">{step.time}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <div className="bg-accent/10 rounded-lg p-2.5 border border-accent/20 text-center">
-                <p className="text-[7px] text-gray-500 uppercase">Εκτιμώμενη Άφιξη</p>
-                <p className="text-lg font-display font-bold text-accent">12 λεπ</p>
-            </div>
+        <div className="w-full h-full bg-black relative">
+            <Image src="/mockups/phone-3.jpg" alt="SpeedBoys Order Details" fill className="object-cover" priority />
         </div>
     );
 }
