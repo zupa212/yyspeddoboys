@@ -30,15 +30,6 @@ export function HeroSection() {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 {/* Top: Text content centered */}
                 <div className="text-center max-w-4xl mx-auto mb-16 lg:mb-20">
-                    <AnimatedSection>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
-                            <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                            <span className="text-xs font-semibold uppercase tracking-wider text-foreground/70">
-                                Πλατφόρμα Logistics-Tech
-                            </span>
-                        </div>
-                    </AnimatedSection>
-
                     <AnimatedSection delay={100}>
                         <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-display font-black tracking-tight leading-[1.0] mb-6">
                             Διανομές χωρίς{" "}
@@ -156,16 +147,7 @@ function PhoneFrame({ children }: { children: React.ReactNode }) {
             <div className="absolute left-[-2px] top-[32%] w-[3px] h-[40px] bg-[#2a2a2a] rounded-r-sm" />
             <div className="absolute left-[-2px] top-[42%] w-[3px] h-[40px] bg-[#2a2a2a] rounded-r-sm" />
             <div className="relative w-full aspect-[9/19.5] bg-black rounded-[2rem] sm:rounded-[2.4rem] overflow-hidden">
-                <div className="absolute top-[8px] left-1/2 -translate-x-1/2 w-[90px] sm:w-[100px] h-[26px] sm:h-[30px] bg-black rounded-full z-20" />
-                <div className="absolute top-[10px] left-[20px] text-[9px] text-white/60 font-medium z-10">9:41</div>
-                <div className="absolute top-[10px] right-[18px] flex items-center gap-1 z-10">
-                    <div className="flex gap-[2px]">
-                        {[1, 2, 3, 4].map(i => (<div key={i} className="w-[3px] rounded-full bg-white/60" style={{ height: `${6 + i * 2}px` }} />))}
-                    </div>
-                    <div className="text-[9px] text-white/60 font-medium ml-1">100%</div>
-                </div>
                 {children}
-                <div className="absolute bottom-[6px] left-1/2 -translate-x-1/2 w-[100px] h-[4px] bg-white/20 rounded-full z-20" />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none z-10" />
             </div>
         </div>
