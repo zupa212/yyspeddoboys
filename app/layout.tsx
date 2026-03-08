@@ -19,7 +19,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://speedboys.gr"),
-  title: "SpeedBoys | Thessaloniki Delivery Logistics",
+  title: "SpeedBoys | Logistics Διανομών Θεσσαλονίκη",
   description:
     "SpeedBoys delivers modern logistics for restaurants and riders in Thessaloniki. Delivery Thessaloniki and \u03b4\u03b9\u03b1\u03bd\u03bf\u03bc\u03ae \u0398\u03b5\u03c3\u03c3\u03b1\u03bb\u03bf\u03bd\u03af\u03ba\u03b7 solutions for growth.",
   keywords: [
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "SpeedBoys - Thessaloniki Delivery Partner",
+    title: "SpeedBoys - Συνεργάτης Διανομών Θεσσαλονίκη",
     description:
-      "Outsource your fleet and grow delivery in Thessaloniki. English + Greek delivery services by SpeedBoys.",
+      "Εξωτερικεύστε τον στόλο σας και αναπτύξτε τις διανομές στη Θεσσαλονίκη με το SpeedBoys.",
     url: "/",
     type: "website",
     locale: "el_GR",
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SpeedBoys | Thessaloniki Delivery Logistics",
+    title: "SpeedBoys | Logistics Διανομών Θεσσαλονίκη",
     description:
-      "Modern delivery logistics and fleet outsourcing for restaurants and riders in Thessaloniki.",
+      "Σύγχρονα logistics διανομών και outsourcing στόλου για εστιατόρια και riders στη Θεσσαλονίκη.",
   },
   robots: {
     index: true,
@@ -88,7 +88,7 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "SpeedBoys",
   url: "https://speedboys.gr",
-  inLanguage: ["en", "el"],
+  inLanguage: ["el"],
 };
 
 export default function RootLayout({
@@ -97,7 +97,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="el" className="scroll-smooth">
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-background text-foreground overflow-x-hidden`}
       >

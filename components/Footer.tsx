@@ -3,26 +3,22 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 const footerLinks = {
     restaurants: [
-        { label: "Become a Partner", href: "/partners" },
-        { label: "How It Works", href: "/partners#partner-form" },
-        { label: "Benefits", href: "/partners" },
-        { label: "FAQ", href: "/partners" },
+        { label: "Γίνε Συνεργάτης", href: "/partners" },
+        { label: "Πώς Λειτουργεί", href: "/partners#partner-form" },
+        { label: "Πλεονεκτήματα", href: "/partners" },
+        { label: "Συχνές Ερωτήσεις", href: "/partners" },
     ],
     riders: [
-        { label: "Join as a Rider", href: "/riders" },
-        { label: "Requirements", href: "/riders" },
-        { label: "Apply Now", href: "/riders#rider-form" },
-        { label: "FAQ", href: "/riders" },
+        { label: "Γίνε Διανομέας", href: "/riders" },
+        { label: "Απαιτήσεις", href: "/riders" },
+        { label: "Κάνε Αίτηση", href: "/riders#rider-form" },
+        { label: "Συχνές Ερωτήσεις", href: "/riders" },
     ],
     company: [
-        { label: "Thessaloniki Delivery", href: "/thessaloniki-delivery" },
-        { label: "Restaurant Delivery Thessaloniki", href: "/restaurant-delivery-thessaloniki" },
-        { label: "Fleet Outsourcing Thessaloniki", href: "/fleet-outsourcing-thessaloniki" },
-        { label: "Driver Jobs Thessaloniki", href: "/driver-jobs-thessaloniki" },
-        { label: "About Us", href: "#" },
-        { label: "Contact", href: "#" },
-        { label: "Careers", href: "#" },
-        { label: "Privacy Policy", href: "#" },
+        { label: "Σχετικά με εμάς", href: "#" },
+        { label: "Επικοινωνία", href: "#" },
+        { label: "Καριέρα", href: "#" },
+        { label: "Πολιτική Απορρήτου", href: "#" },
     ],
 };
 
@@ -41,7 +37,7 @@ export function Footer() {
                             </span>
                         </Link>
                         <p className="text-sm text-gray-500 leading-relaxed mb-4 max-w-xs">
-                            Scalable logistics and delivery fleet operations for food businesses.
+                            Σύγχρονες λύσεις logistics και διαχείρισης στόλου διανομών για επιχειρήσεις εστίασης.
                         </p>
                         <div className="space-y-2">
                             <a href="mailto:hello@speedboys.gr" className="flex items-center gap-2 text-sm hover:text-accent transition-colors">
@@ -54,14 +50,14 @@ export function Footer() {
                             </a>
                             <div className="flex items-center gap-2 text-sm">
                                 <MapPin size={14} />
-                                Athens, Greece
+                                Θεσσαλονίκη, Ελλάδα
                             </div>
                         </div>
                     </div>
 
                     <div>
                         <h4 className="text-white font-display font-semibold mb-4 text-sm uppercase tracking-wider">
-                            For Restaurants
+                            Για Εστιατόρια
                         </h4>
                         <ul className="space-y-2.5">
                             {footerLinks.restaurants.map((link) => (
@@ -76,7 +72,7 @@ export function Footer() {
 
                     <div>
                         <h4 className="text-white font-display font-semibold mb-4 text-sm uppercase tracking-wider">
-                            For Riders
+                            Για Διανομείς
                         </h4>
                         <ul className="space-y-2.5">
                             {footerLinks.riders.map((link) => (
@@ -91,7 +87,7 @@ export function Footer() {
 
                     <div>
                         <h4 className="text-white font-display font-semibold mb-4 text-sm uppercase tracking-wider">
-                            Company
+                            Εταιρεία
                         </h4>
                         <ul className="space-y-2.5">
                             {footerLinks.company.map((link) => (
@@ -107,14 +103,14 @@ export function Footer() {
 
                 <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-gray-600">
-                        &copy; {new Date().getFullYear()} SpeedBoys. All rights reserved.
+                        &copy; {new Date().getFullYear()} SpeedBoys. Με επιφύλαξη κάθε δικαιώματος.
                     </p>
                     <div className="flex gap-6">
                         <Link href="#" className="text-xs text-gray-600 hover:text-accent transition-colors">
-                            Terms of Service
+                            Όροι Χρήσης
                         </Link>
                         <Link href="#" className="text-xs text-gray-600 hover:text-accent transition-colors">
-                            Privacy Policy
+                            Πολιτική Απορρήτου
                         </Link>
                     </div>
                 </div>

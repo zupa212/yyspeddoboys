@@ -25,26 +25,26 @@ export function Navbar() {
                             href="/partners"
                             className="text-sm font-medium text-muted hover:text-foreground transition-colors"
                         >
-                            For Restaurants
+                            Για Εστιατόρια
                         </Link>
                         <Link
                             href="/riders"
                             className="text-sm font-medium text-muted hover:text-foreground transition-colors"
                         >
-                            For Riders
+                            Για Διανομείς
                         </Link>
                         <Link
                             href="/partners"
                             className="inline-flex items-center justify-center px-5 py-2.5 bg-accent text-foreground font-semibold text-sm rounded-full hover:bg-accent-dark hover:scale-105 active:scale-95 transition-all shadow-sm"
                         >
-                            Become a Partner
+                            Γίνε Συνεργάτης
                         </Link>
                     </div>
 
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="md:hidden p-2 rounded-xl hover:bg-black/5 transition-colors"
-                        aria-label="Toggle menu"
+                        aria-label="Εναλλαγή μενού"
                     >
                         {isOpen ? <X size={22} /> : <Menu size={22} />}
                     </button>
@@ -59,14 +59,14 @@ export function Navbar() {
                             onClick={() => setIsOpen(false)}
                             className="block text-base font-medium text-foreground py-2"
                         >
-                            For Restaurants
+                            Για Εστιατόρια
                         </Link>
                         <Link
                             href="/riders"
                             onClick={() => setIsOpen(false)}
                             className="block text-base font-medium text-foreground py-2"
                         >
-                            For Riders
+                            Για Διανομείς
                         </Link>
                         <div className="pt-2 space-y-3">
                             <Link
@@ -74,14 +74,14 @@ export function Navbar() {
                                 onClick={() => setIsOpen(false)}
                                 className="block w-full text-center px-5 py-3 bg-accent text-foreground font-semibold rounded-full"
                             >
-                                Become a Partner
+                                Γίνε Συνεργάτης
                             </Link>
                             <Link
                                 href="/riders"
                                 onClick={() => setIsOpen(false)}
                                 className="block w-full text-center px-5 py-3 border-2 border-foreground text-foreground font-semibold rounded-full"
                             >
-                                Join as a Rider
+                                Γίνε Διανομέας
                             </Link>
                         </div>
                     </div>

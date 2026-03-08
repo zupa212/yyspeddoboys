@@ -5,27 +5,27 @@ import { Truck, Globe, BarChart3, Layers } from "lucide-react";
 const features = [
     {
         icon: Truck,
-        title: "Outsourced Fleet Operations",
+        title: "Εξωτερική Διαχείριση Στόλου",
         description:
-            "We manage the delivery riders so you don't have to. No hiring, no scheduling, no headaches.",
+            "Διαχειριζόμαστε τους διανομείς εμείς. Χωρίς προσλήψεις, χωρίς προγραμματισμό βαρδιών, χωρίς πονοκεφάλους.",
     },
     {
         icon: Globe,
-        title: "Direct Order Channel",
+        title: "Κανάλι Απευθείας Παραγγελιών",
         description:
-            "Gain an additional sales stream through the SpeedBoys ecosystem, beyond traditional marketplaces.",
+            "Αποκτήστε ένα επιπλέον κανάλι πωλήσεων μέσω του οικοσυστήματος SpeedBoys, πέρα από τα παραδοσιακά marketplaces.",
     },
     {
         icon: BarChart3,
-        title: "Scalable Logistics",
+        title: "Κλιμακούμενο Logistics",
         description:
-            "From one restaurant to fifty locations — our infrastructure scales with your growth, seamlessly.",
+            "Από ένα εστιατόριο σε πενήντα σημεία — η υποδομή μας κλιμακώνεται μαζί με την ανάπτυξή σας.",
     },
     {
         icon: Layers,
-        title: "Complementary, Not Competitive",
+        title: "Συμπληρωματικό, Όχι Ανταγωνιστικό",
         description:
-            "We work alongside Wolt, efood, and your in-house ops — not against them. A true logistics partner.",
+            "Λειτουργούμε δίπλα στο Wolt, στο efood και στις δικές σας λειτουργίες — όχι εναντίον τους. Ένας αληθινός logistics partner.",
     },
 ];
 
@@ -35,16 +35,16 @@ export function WhatIsSection() {
             <div className="text-center max-w-3xl mx-auto mb-16">
                 <AnimatedSection>
                     <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-3">
-                        What We Do
+                        Τι Κάνουμε
                     </p>
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
-                        Your Orders. Our Fleet.{" "}
-                        <span className="text-muted">Ultimate Speed.</span>
+                        Οι Παραγγελίες Σας. Ο Στόλος Μας.{" "}
+                        <span className="text-muted">Απόλυτη Ταχύτητα.</span>
                     </h2>
                     <p className="text-lg text-muted leading-relaxed">
-                        SpeedBoys is a logistics-tech platform that helps food businesses
-                        outsource delivery fleet operations while unlocking additional
-                        revenue through direct orders.
+                        Το SpeedBoys είναι μια logistics-tech πλατφόρμα που βοηθά επιχειρήσεις εστίασης
+                        να εξωτερικεύσουν τη διαχείριση στόλου διανομών, ξεκλειδώνοντας παράλληλα
+                        πρόσθετα έσοδα μέσω απευθείας παραγγελιών.
                     </p>
                 </AnimatedSection>
             </div>

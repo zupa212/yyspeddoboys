@@ -9,11 +9,11 @@ export function SplitCTASection() {
             <AnimatedSection>
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-4">
-                        Ready to Move?
+                        Έτοιμοι να Ξεκινήσετε;
                     </h2>
                     <p className="text-lg text-muted">
-                        Whether you&apos;re a restaurant looking for fleet support or a rider
-                        looking for opportunity — SpeedBoys is built for you.
+                        Είτε είστε εστιατόριο που ψάχνει υποστήριξη στόλου, είτε rider
+                        που ψάχνει ευκαιρία — το SpeedBoys είναι φτιαγμένο για εσάς.
                     </p>
                 </div>
             </AnimatedSection>
@@ -25,17 +25,17 @@ export function SplitCTASection() {
                         className="group block bg-card-bg rounded-3xl p-8 sm:p-10 border border-border hover:border-accent/40 hover:shadow-xl transition-all duration-300"
                     >
                         <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-3">
-                            For Restaurants
+                            Για Εστιατόρια
                         </p>
                         <h3 className="text-2xl font-display font-bold mb-3">
-                            Become a Partner
+                            Γίνε Συνεργάτης
                         </h3>
                         <p className="text-muted text-sm mb-6 leading-relaxed">
-                            Outsource your delivery fleet operations and start receiving more
-                            direct orders through SpeedBoys.
+                            Εξωτερικεύστε τις λειτουργίες του στόλου διανομών σας και αρχίστε να λαμβάνετε
+                            περισσότερες απευθείας παραγγελίες μέσω SpeedBoys.
                         </p>
                         <span className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-foreground font-bold text-sm rounded-full group-hover:scale-105 transition-transform">
-                            Get Started
+                            Ξεκινήστε
                             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </span>
                     </Link>
@@ -47,17 +47,17 @@ export function SplitCTASection() {
                         className="group block bg-dark-surface text-white rounded-3xl p-8 sm:p-10 border border-white/10 hover:border-accent/40 hover:shadow-xl transition-all duration-300"
                     >
                         <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-3">
-                            For Riders
+                            Για Διανομείς
                         </p>
                         <h3 className="text-2xl font-display font-bold mb-3">
-                            Join as a Rider
+                            Γίνε Διανομέας
                         </h3>
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                            Flexible delivery work with a modern platform. Join a growing
-                            network and earn on your terms.
+                            Ευέλικτη εργασία διανομών με μοντέρνα πλατφόρμα. Μπες σε ένα αναπτυσσόμενο
+                            δίκτυο και κέρδισε με τους δικούς σου όρους.
                         </p>
                         <span className="inline-flex items-center gap-2 px-6 py-3 border-2 border-accent text-accent font-bold text-sm rounded-full group-hover:bg-accent group-hover:text-foreground transition-all">
-                            Apply Now
+                            Κάνε Αίτηση
                             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                         </span>
                     </Link>

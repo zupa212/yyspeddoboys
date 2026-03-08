@@ -7,44 +7,38 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        question: "What exactly does SpeedBoys do?",
+        question: "Τι ακριβώς κάνει το SpeedBoys;",
         answer:
-            "SpeedBoys is a delivery logistics platform. We provide outsourced delivery fleet support to restaurants and food businesses. We also create an additional direct-order channel through our app ecosystem.",
+            "Το SpeedBoys είναι μια πλατφόρμα logistics διανομών. Παρέχουμε εξωτερική υποστήριξη στόλου διανομών σε εστιατόρια και επιχειρήσεις εστίασης. Δημιουργούμε επίσης ένα επιπλέον κανάλι απευθείας παραγγελιών μέσω του οικοσυστήματος της εφαρμογής μας.",
     },
     {
-        question: "Do I need to replace my existing delivery setup?",
+        question: "Χρειάζεται να αντικαταστήσω το τρέχον σύστημα διανομών μου;",
         answer:
-            "Not at all. SpeedBoys is designed to complement your current operations. We work alongside platforms like Wolt and efood, and can integrate with your existing order workflow.",
+            "Καθόλου. Το SpeedBoys είναι σχεδιασμένο να συμπληρώνει τις τρέχουσες λειτουργίες σας. Συνεργαζόμαστε με πλατφόρμες όπως το Wolt και το efood, και μπορούμε να ενσωματωθούμε στη ροή παραγγελιών σας.",
     },
     {
-        question: "Can SpeedBoys help us get direct orders too?",
+        question: "Μπορεί το SpeedBoys να μας φέρει απευθείας παραγγελίες;",
         answer:
-            "Yes. Beyond fleet support, SpeedBoys generates direct-order opportunities through its own consumer-facing app. This gives your restaurant an additional revenue stream.",
+            "Ναι. Πέρα από την υποστήριξη στόλου, το SpeedBoys δημιουργεί ευκαιρίες απευθείας παραγγελιών μέσω της εφαρμογής μας. Αυτό δίνει στο εστιατόριό σας ένα πρόσθετο κανάλι εσόδων.",
     },
     {
-        question: "Is this suitable for small restaurants?",
+        question: "Είναι κατάλληλο για μικρά εστιατόρια;",
         answer:
-            "Absolutely. SpeedBoys works with restaurants of all sizes — from single-location cafés to multi-location food brands and dark kitchens.",
+            "Απολύτως. Το SpeedBoys συνεργάζεται με εστιατόρια κάθε μεγέθους — από μονοκατάστημα καφετέριες μέχρι πολυκατάστημα food brands και dark kitchens.",
     },
     {
-        question: "How does the rider application work?",
+        question: "Πώς λειτουργεί η αίτηση για riders;",
         answer:
-            "Riders can apply through our website. After submitting the application, our team reviews it and contacts you with next steps. The process is straightforward and fast.",
+            "Οι riders μπορούν να κάνουν αίτηση μέσω της ιστοσελίδας μας. Μετά την υποβολή, η ομάδα μας αξιολογεί και επικοινωνεί μαζί σας. Η διαδικασία είναι απλή και γρήγορη.",
     },
     {
-        question: "What cities is SpeedBoys available in?",
+        question: "Σε ποιες πόλεις είναι διαθέσιμο το SpeedBoys;",
         answer:
-            "We are actively expanding. Contact us to learn about availability in your city and upcoming launch areas.",
+            "Επεκτεινόμαστε ενεργά. Επικοινωνήστε μαζί μας για να μάθετε τη διαθεσιμότητα στην πόλη σας και τις επερχόμενες περιοχές κάλυψης.",
     },
 ];
 
-function FAQItem({
-    question,
-    answer,
-}: {
-    question: string;
-    answer: string;
-}) {
+function FAQItem({ question, answer }: { question: string; answer: string }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -58,14 +52,10 @@ function FAQItem({
                 </span>
                 <ChevronDown
                     size={20}
-                    className={`flex-shrink-0 text-muted transition-transform duration-300 ${isOpen ? "rotate-180" : ""
-                        }`}
+                    className={`flex-shrink-0 text-muted transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
                 />
             </button>
-            <div
-                className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 pb-6" : "max-h-0"
-                    }`}
-            >
+            <div className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-40 pb-6" : "max-h-0"}`}>
                 <p className="text-sm text-muted leading-relaxed">{answer}</p>
             </div>
         </div>
@@ -79,10 +69,10 @@ export function FAQSection() {
                 <div className="text-center mb-12">
                     <AnimatedSection>
                         <p className="text-sm font-semibold uppercase tracking-wider text-accent mb-3">
-                            FAQ
+                            Συχνές Ερωτήσεις
                         </p>
                         <h2 className="text-3xl sm:text-4xl font-display font-bold">
-                            Questions? <span className="text-muted">Answered.</span>
+                            Ερωτήσεις; <span className="text-muted">Απαντήσεις.</span>
                         </h2>
                     </AnimatedSection>
                 </div>
