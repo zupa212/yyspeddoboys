@@ -1,26 +1,312 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F9F9F6;
+  --foreground: #1A1D20;
+  --accent: #D4FF00;
+  --accent-dark: #b8e000;
+  --muted: #6B7280;
+  --muted-light: #9CA3AF;
+  --card-bg: #FFFFFF;
+  --dark-surface: #111111;
+  --dark-surface-2: #1A1A1A;
+  --border: #E5E7EB;
+  --border-light: #F3F4F6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --color-card-bg: var(--card-bg);
+  --color-dark-surface: var(--dark-surface);
+  --color-dark-surface-2: var(--dark-surface-2);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* === SMOOTH SCROLLING & SELECTION === */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--foreground);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* === HEADINGS === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+/* === ANIMATIONS === */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(212, 255, 0, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(212, 255, 0, 0.3);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* === STAGGER DELAYS === */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* === GLASSMORPHISM UTILITY === */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* === 3D PHONE HERO === */
+.phone-frame {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Entrance animations for each phone */
+.hero-phone-left {
+  animation: phone-enter-left 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.hero-phone-center {
+  animation: phone-enter-center 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.hero-phone-right {
+  animation: phone-enter-right 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+}
+
+@keyframes phone-enter-left {
+  from {
+    opacity: 0;
+    transform: rotateY(30deg) rotateX(8deg) rotateZ(-5deg) translateY(60px) translateZ(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateY(18deg) rotateX(2deg) rotateZ(-2deg) translateZ(-30px);
+  }
+}
+
+@keyframes phone-enter-center {
+  from {
+    opacity: 0;
+    transform: rotateX(10deg) translateY(80px) translateZ(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(2deg) translateZ(60px) translateY(-10px);
+  }
+}
+
+@keyframes phone-enter-right {
+  from {
+    opacity: 0;
+    transform: rotateY(-30deg) rotateX(8deg) rotateZ(5deg) translateY(60px) translateZ(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateY(-18deg) rotateX(2deg) rotateZ(2deg) translateZ(-30px);
+  }
+}
+
+/* === DELIVERY NOTIFICATION ANIMATIONS === */
+@keyframes notification-slide-in {
+  from {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(4%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes accepted-pulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
