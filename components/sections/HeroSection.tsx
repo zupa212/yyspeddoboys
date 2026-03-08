@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { RiderCTA } from "@/components/interactive/RiderCTA";
 import {
     Zap,
     Shield,
@@ -55,12 +56,7 @@ export function HeroSection() {
                             >
                                 Γίνε Συνεργάτης
                             </Link>
-                            <Link
-                                href="/riders"
-                                className="inline-flex items-center justify-center px-8 py-4 border-2 border-foreground text-foreground font-bold text-base rounded-full hover:bg-foreground hover:text-background transition-all"
-                            >
-                                Γίνε Διανομέας
-                            </Link>
+                            <RiderCTA />
                         </div>
                     </AnimatedSection>
 
